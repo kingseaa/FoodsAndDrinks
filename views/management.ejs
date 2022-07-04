@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <%- include('../bootstrap.ejs') %>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="side">
+      <%- include('./sideleft.ejs') %>
+
+      <div class="side-right">
+        <h1 class="heading_management">Quản lí đơn hàng</h1>
+
+        <table>
+          <tr>
+            <th>Email người đặt hàng</th>
+            <th>Người nhận hàng</th>
+            <th>Số điện thoại người đặt hàng</th>
+            <th>Địa chỉ giao hàng</th>
+            <th>Ngày đặt hàng</th>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+            <td>$100</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+            <td>$150</td>
+            <td>$150</td>
+          </tr>
+          <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+            <td>$300</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td>Cleveland</td>
+            <td>Brown</td>
+            <td>$250</td>
+            <td>$250</td>
+            <td>$250</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

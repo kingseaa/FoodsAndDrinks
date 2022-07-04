@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <%- include('../bootstrap.ejs') %>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="side">
+      <%- include('./sideleft.ejs') %>
+
+      <div class="side-right">
+        <form action="/add" class="add_new_item" method="post">
+          <h3>Thêm sản phẩm mới</h3>
+          <input
+            type="text"
+            placeholder="Tên sản phẩm"
+            name="tensanpham"
+            class="new_item"
+          />
+          <input
+            type="text"
+            placeholder="Số lượng"
+            name="soluongsanpham"
+            class="new_item"
+          />
+          <input
+            type="text"
+            placeholder="Mô tả sản phẩm"
+            name="motasanpham"
+            class="new_item"
+          />
+          <select
+            class="custom-select"
+            id="inputGroupSelect01"
+            name="loaisanpham"
+          >
+            <option selected value="food">Food</option>
+            <option value="drink">Drink</option>
+          </select>
+          <input type="file" name="hinhanh" id="" class="new_item" />
+          <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

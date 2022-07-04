@@ -2,22 +2,25 @@
   --primary-color: rgb(248, 104, 104);
   --gray: #ddd;
   --text: #636363;
+  --text-white: #fff;
 }
 
 body {
-  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  outline: none !important;
 }
 
 a {
   color: #00b7ff;
   text-decoration: none;
+}
+
+.container {
+  margin-top: 20px;
 }
 
 .container .logo {
@@ -80,4 +83,101 @@ a {
 
 .sub-content img {
   width: -webkit-fill-available;
+}
+
+p.price {
+  margin: 5px 10px;
+  color: var(--primary-color);
+}
+
+.amount {
+  padding-left: 10px;
+}
+
+button.add_to_cart {
+  display: block;
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--text-white);
+  background: var(--primary-color);
+}
+
+.side {
+  display: flex;
+}
+
+.side-left {
+  width: 30%;
+  height: 100vh;
+  background-color: #191616;
+  position: fixed;
+}
+
+.side-right {
+  width: 70%;
+  height: 100vh;
+  padding: 30px;
+  margin-left: 30%;
+}
+
+.list_management {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.list_item > a {
+  padding: 16px;
+  color: var(--text);
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.add_new_item {
+  border: 1px solid var(--gray);
+  margin: auto;
+  padding: 20px;
+  width: 500px;
+}
+
+.new_item {
+  display: inherit;
+  margin-top: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.custom-select {
+  margin-top: 12px !important;
+  width: 100px !important;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  padding: 6px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th {
+  height: 50px;
+}
+
+.heading_management {
+  background-color: #483d3d;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 30px;
+  color: var(--text-white);
 }
