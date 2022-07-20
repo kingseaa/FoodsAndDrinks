@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <%- include('../bootstrap.ejs') %>
 
-    <title>Document</title>
+    <title>Danh sách sản phẩm</title>
   </head>
   <body>
     <div class="side">
@@ -23,35 +23,25 @@
             <th>Mô tả</th>
             <th>Loại sản phẩm</th>
             <th>Ảnh</th>
+            <th>Chỉnh sửa</th>
           </tr>
           <tr>
-            <td>Peter</td>
-            <td>Griffin</td>
-            <td>$100</td>
-            <td>$100</td>
-            <td>$100</td>
+            <% data.forEach(el => { %>
+            <td><%= el.title %></td>
+            <td><%= el.amount %></td>
+            <td><%= el.description %></td>
+            <td><%= el.product_type %></td>
+            <td><%= el.image %></td>
+            <td>
+              <button class="edit">
+                <a href="/admin/pages/edit?id=<%= el._id %>">Edit</a>
+              </button>
+              <button class="delete">
+                <a href="/admin/pages/delete?id=<%= el._id %>">Delete</a>
+              </button>
+            </td>
           </tr>
-          <tr>
-            <td>Lois</td>
-            <td>Griffin</td>
-            <td>$150</td>
-            <td>$150</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>Joe</td>
-            <td>Swanson</td>
-            <td>$300</td>
-            <td>$300</td>
-            <td>$300</td>
-          </tr>
-          <tr>
-            <td>Cleveland</td>
-            <td>Brown</td>
-            <td>$250</td>
-            <td>$250</td>
-            <td>$250</td>
-          </tr>
+          <% })%>
         </table>
       </div>
     </div>

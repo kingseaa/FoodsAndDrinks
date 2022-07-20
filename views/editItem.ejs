@@ -7,50 +7,61 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <%- include('../bootstrap.ejs') %>
 
-    <title>Thêm sản phẩm</title>
+    <title>Edit</title>
   </head>
   <body>
     <div class="side">
       <%- include('./sideleft.ejs') %>
 
       <div class="side-right">
-        <form action="/admin/pages/add" class="add_new_item" method="post">
-          <h3>Thêm sản phẩm mới</h3>
+        <form
+          action="/admin/pages/editproduct"
+          class="add_new_item"
+          method="post"
+        >
+          <h3>Sửa sản phẩm</h3>
           <input
             type="text"
             placeholder="Tên sản phẩm"
             name="tensanpham"
             class="new_item"
+            value="<%= existData.title %>"
           />
           <input
             type="text"
             placeholder="Số lượng"
             name="soluongsanpham"
             class="new_item"
+            value="<%= existData.amount %>"
           />
           <input
             type="text"
             placeholder="Giá"
             name="giatien"
             class="new_item"
+            value="<%= existData.price %>"
           />
           <textarea
             id="description"
             name="motasanpham"
             placeholder="Mô tả sản phẩm"
+            value="<%= existData.description %>"
           >
-          Mô tả sản phẩm
-          </textarea>
+          <%= existData.product_type %>
+        </textarea
+          >
           <select
             class="custom-select"
             id="inputGroupSelect01"
             name="loaisanpham"
+            value="<%= existData.product_type %>"
           >
             <option selected value="food">Food</option>
             <option value="drink">Drink</option>
           </select>
           <input type="file" name="hinhanh" class="new_item" />
-          <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+          <button type="submit" class="btn btn-primary">Sửa sản phẩm</button>
+          <input value="<%= existData._id %>" name="_id" type="text" hidden />
         </form>
       </div>
     </div>

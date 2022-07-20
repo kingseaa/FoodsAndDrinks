@@ -1,3 +1,5 @@
+@import url("../../node_modules/font-awesome/css/font-awesome.min.css");
+
 :root {
   --primary-color: rgb(248, 104, 104);
   --gray: #ddd;
@@ -102,6 +104,7 @@ button.add_to_cart {
   border-radius: 4px;
   color: var(--text-white);
   background: var(--primary-color);
+  cursor: pointer;
 }
 
 .side {
@@ -136,10 +139,12 @@ button.add_to_cart {
 }
 
 .add_new_item {
-  border: 1px solid var(--gray);
+  border: 1px solid #c5d6e5;
   margin: auto;
   padding: 20px;
   width: 500px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 2px #ddd;
 }
 
 .new_item {
@@ -180,4 +185,16 @@ th {
   text-align: center;
   font-size: 30px;
   color: var(--text-white);
+}
+
+#description {
+  margin-top: 10px;
+  width: 190px;
+  display: block;
+}
+
+.edit,
+.delete {
+  border: 0;
+  border-radius: 3px;
 }
