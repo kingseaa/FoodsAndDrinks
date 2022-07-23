@@ -16,5 +16,6 @@ router.get("/management", function (req, res) {
 });
 
 router.get("/listitem", AdminController.adminGetAllProducts);
+router.get("/deleteproduct", AdminController.deleteProduct);
 
 module.exports = router;

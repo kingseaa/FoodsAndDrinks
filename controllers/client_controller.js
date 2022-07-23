@@ -12,7 +12,6 @@ class UsersController {
     let productFromSearch = await Models.Products.find({
       title: search,
     });
-    console.log(productFromSearch, "productSearch");
     return;
   }
 
@@ -28,7 +27,6 @@ class UsersController {
     let drink = await Models.Products.find({
       product_type: "drink",
     });
-    console.log(drink, "drink");
     return res.render("drink.ejs", { data: drink });
   }
 }

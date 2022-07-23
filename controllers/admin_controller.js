@@ -63,6 +63,23 @@ class AdminController {
       return;
     }
   }
+
+  async deleteProduct(req, res) {
+    const id = req.query.id;
+    console.log(id);
+    await Models.Products.findByIdAndDelete(id)
+      .then((data) => {
+        if (!data) {
+          res.status(404).send({ message: `Không thể xóa ${id}` });
+        } else {
+          return res.render("../pages/listitem");
+        }
+      })
+      .catch((err) => {
+        res.status(500).send({ message: "lỗi xóa" });
+      });
+    return res.redirect("../pages/listitem");
+  }
 }
 
 module.exports = new AdminController();
